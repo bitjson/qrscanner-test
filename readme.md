@@ -14,10 +14,22 @@ cordova prepare
 
 ## Run
 
+### Android
+
 ```bash
 adb devices
 # (get the device id from the output)
 cordova run android --target= #(device id goes here)
+```
+
+### iOS
+```bash
+cordova run ios
+```
+
+### Browser
+```bash
+cordova run browser
 ```
 
 ## What it should do
@@ -29,7 +41,7 @@ When the app loads, the scanner should already be showing, and the first scan sh
 ```bash
 cordova create qrscanner-test
 cd qrscanner-test
-cordova platform add android --save
+cordova platform add android ios browser --save
 cordova plugin add cordova-plugin-qrscanner --save
 
 vi www/index.html
